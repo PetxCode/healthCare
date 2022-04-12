@@ -6,7 +6,10 @@ const PhoneBuild = () => {
 		<Div>
 			<Container>
 				<Wrapper>
-					<Image src="/assets/phone.png" />
+					<ImageHolder>
+						<Image src="/assets/phone.png" />
+						<Image1 src="/assets/pp2.png" />
+					</ImageHolder>
 					<Text>
 						<Title>
 							<Title1>Get on Board </Title1>
@@ -30,6 +33,62 @@ const PhoneBuild = () => {
 };
 
 export default PhoneBuild;
+
+const ImageHolder = styled.div`
+	position: relative;
+	width: 600px;
+	height: 100%;
+	/* background-color: red; */
+
+	@media screen and (max-width: 850px) {
+		width: 240px;
+	}
+`;
+
+const Image = styled.img`
+	width: 600px;
+	height: 100%;
+	object-fit: contain;
+	margin-right: 60px;
+	transform: scale(1);
+	transition: all 250ms;
+	position: absolute;
+	top: 0;
+	z-index: 10;
+
+	:hover {
+		cursor: pointer;
+		transform: scale(1.03);
+		opacity: 0;
+	}
+
+	@media screen and (max-width: 850px) {
+		width: 240px;
+	}
+`;
+
+const Image1 = styled.img`
+	width: 600px;
+	height: 100%;
+	object-fit: contain;
+	margin-right: 60px;
+	transform: scale(1);
+	transition: all 250ms;
+	opacity: 1;
+	/* position: absolute; */
+	top: 0;
+	/* z-index: 10; */
+
+	:hover {
+		cursor: pointer;
+		transform: scale(1.03);
+		opacity: 1;
+	}
+
+	@media screen and (max-width: 850px) {
+		width: 240px;
+	}
+`;
 
 const GetImage = styled.img`
 	width: 300px;
@@ -116,24 +175,6 @@ const Title1 = styled.div`
 
 const Text = styled.div`
 	@media screen and (max-width: 850px) {
-	}
-`;
-
-const Image = styled.img`
-	width: 600px;
-	height: 100%;
-	object-fit: contain;
-	margin-right: 60px;
-	transform: scale(1);
-	transition: all 350ms;
-
-	:hover {
-		cursor: pointer;
-		transform: scale(1.03);
-	}
-
-	@media screen and (max-width: 850px) {
-		width: 240px;
 	}
 `;
 

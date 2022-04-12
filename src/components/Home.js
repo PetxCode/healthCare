@@ -4,6 +4,8 @@ import Card from "./Card";
 import CardBuild from "./CardBuild";
 import CenterSider from "./CenterSider";
 import Hero from "./Hero";
+import Last from "./Last";
+import PeoplleSays from "./PeoplleSays";
 import PhoneBuild from "./PhoneBuild";
 import PixSpace from "./PixSpace";
 import TextProps from "./TextProps";
@@ -21,6 +23,8 @@ const Home = () => {
 			<Gap />
 			<PhoneBuild />
 			<PixSpace />
+			<PeoplleSays />
+			<Last />
 		</div>
 	);
 };
