@@ -26,9 +26,9 @@ const Last = () => {
 	const textColor1 = useRef();
 	const textColor2 = useRef();
 
-	const myColor = ["gray", "white", "white"];
-	const myColor1 = ["white", "gray", "white"];
-	const myColor2 = ["white", "white", "gray"];
+	const myColor = ["#7490E9", "white", "white"];
+	const myColor1 = ["white", "#7490E9", "white"];
+	const myColor2 = ["white", "white", "#7490E9"];
 
 	useEffect(() => {
 		setInterval(() => {
