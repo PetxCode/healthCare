@@ -38,10 +38,9 @@ const ImageHolder = styled.div`
 	position: relative;
 	width: 600px;
 	height: 100%;
-	/* background-color: red; */
 
-	@media screen and (max-width: 850px) {
-		width: 240px;
+	@media screen and (max-width: 550px) {
+		width: 95%;
 	}
 `;
 
@@ -75,9 +74,7 @@ const Image1 = styled.img`
 	transform: scale(1);
 	transition: all 250ms;
 	opacity: 1;
-	/* position: absolute; */
 	top: 0;
-	/* z-index: 10; */
 
 	:hover {
 		cursor: pointer;
@@ -133,11 +130,15 @@ const SubText = styled.div`
 		font-size: 20px;
 		width: 300px;
 		margin-left: 10px;
+		text-align: center;
 	}
 `;
 
 const Title = styled.div`
 	color: #2443a7;
+	@media screen and (max-width: 460px) {
+		font-size: 20px;
+	}
 `;
 
 const Title1 = styled.div`
@@ -175,6 +176,9 @@ const Title1 = styled.div`
 
 const Text = styled.div`
 	@media screen and (max-width: 850px) {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
 	}
 `;
 

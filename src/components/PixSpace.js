@@ -17,9 +17,14 @@ const Pix = styled.div`
 	height: 100%;
 	width: 100%;
 	background-image: url("/assets/part.png");
+
+	@media screen and (max-width: 550px) {
+		height: 100px;
+	}
 `;
 
 const Container = styled.div`
 	width: 100%;
-	height: 200px;
+	min-height: 100px;
+	height: 100%;
 `;

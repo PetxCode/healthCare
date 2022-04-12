@@ -7,15 +7,15 @@ const Last = () => {
 	const data = [
 		{
 			say: "If you want to clear the setInterval() method and avoid memory leak, then you need to do two things:",
-			who: "Petx",
+			who: "Petx Global",
 		},
 		{
-			say: "Please note that you need to use the previous state value passed into the setCount() method to constantly increment the count value.",
-			who: "Oti",
+			say: "Please note thatvalue passed into the setCount() method to constantly increment the count value.",
+			who: "Oti Peter",
 		},
 		{
-			say: "Executed only once during the lifetime of the component, calling the setInterval() method to run the setCount() method once every 1000 milliseconds.",
-			who: "Peter",
+			say: "Executed only lifetime of the component, calling the setInterval() method to run the setCount() .",
+			who: "Peter Oti",
 		},
 	];
 
@@ -26,9 +26,9 @@ const Last = () => {
 	const textColor1 = useRef();
 	const textColor2 = useRef();
 
-	const myColor = ["gray", "white", "white"];
-	const myColor1 = ["white", "gray", "white"];
-	const myColor2 = ["white", "white", "gray"];
+	const myColor = ["#7490E9", "white", "white"];
+	const myColor1 = ["white", "#7490E9", "white"];
+	const myColor2 = ["white", "white", "#7490E9"];
 
 	useEffect(() => {
 		setInterval(() => {
@@ -61,10 +61,9 @@ const Last = () => {
 					<Image src={pix} />
 
 					<Icon />
-					<NewText></NewText>
-					<NewText>{quote[count % 3].say}</NewText>
+					<NewText>{quote[count % quote.length].say}</NewText>
 					<Push />
-					<Says>{quote[count % 3].who}</Says>
+					<Says>{quote[count % quote.length].who}</Says>
 					<Dot>
 						<Dots ref={textColor} />
 						<Dots ref={textColor1} />
@@ -84,11 +83,28 @@ const Icon = styled(FaQuoteLeft)`
 
 const Dot = styled.div`
 	display: flex;
+
+	@media screen and (max-width: 768px) {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+	}
 `;
 
 const Says = styled.div`
 	margin-bottom: 50px;
-	font-size: 30px;
+	font-size: 40px;
+	font-weight: bold;
+
+	@media screen and (max-width: 768px) {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		font-size: 30px;
+		text-transform: uppercase;
+		margin-top: 40px;
+		text-align: center;
+	}
 `;
 
 const Dots = styled.div`
@@ -103,10 +119,17 @@ const Push = styled.div`
 	flex: 1;
 `;
 const NewText = styled.div`
-	font-size: 25px;
+	font-size: 30px;
 	margin: 10px 0;
-	width: 300px;
+	width: 50%;
 	text-align: right;
+	margin-top: 10px;
+
+	@media screen and (max-width: 768px) {
+		text-align: left;
+		width: 100%;
+		font-size: 20px;
+	}
 `;
 
 const Image = styled.img`
@@ -116,6 +139,12 @@ const Image = styled.img`
 	position: absolute;
 	bottom: 0;
 	left: -180px;
+
+	@media screen and (max-width: 668px) {
+		display: none;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 `;
 
 const Box = styled.div`
@@ -128,6 +157,15 @@ const Box = styled.div`
 	position: relative;
 	height: 500px;
 	flex-direction: column;
+
+	@media screen and (max-width: 768px) {
+		display: flex;
+		justify-content: center;
+		width: 80%;
+		flex-direction: column;
+		font-size: 30px;
+		height: 400px;
+	}
 `;
 
 const Type = styled.div`
@@ -136,11 +174,20 @@ const Type = styled.div`
 	text-align: right;
 	font-style: oblique;
 	color: #2443a7;
+
+	@media screen and (max-width: 768px) {
+		width: 300px;
+		font-size: 40px;
+	}
 `;
 
 const Text = styled.div`
 	display: flex;
 	justify-content: flex-end;
+
+	@media screen and (max-width: 768px) {
+		width: 115%;
+	}
 `;
 const Wrapper = styled.div`
 	width: 70%;
@@ -153,7 +200,7 @@ const Container = styled.div`
 	width: 100%;
 	height: 100%;
 	min-height: 500px;
-	padding: 40px 0;
+	/* padding: 40px 0; */
 	display: flex;
 	justify-content: center;
 `;

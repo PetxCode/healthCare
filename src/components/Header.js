@@ -85,7 +85,7 @@ const Head = styled.div`
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 11;
+	z-index: 1100;
 `;
 
 const Cart = styled.div`
