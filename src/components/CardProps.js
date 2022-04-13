@@ -69,4 +69,8 @@ const Container = styled.div`
 		rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 	padding: 70px 20px;
 	margin: 20px;
+	@media screen and (max-width: 468px) {
+		margin: 20px 0;
+		width: 250px;
+	}
 `;

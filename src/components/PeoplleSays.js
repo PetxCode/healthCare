@@ -10,13 +10,14 @@ const PeoplleSays = () => {
 				<Title>What People </Title>
 				<Title2>
 					Think{" "}
-					<p>
+					<span>
 						about us
 						<div />
-					</p>{" "}
+					</span>{" "}
 				</Title2>
 				<Space />
 				<Logos>
+					<Logo1>Farad</Logo1>
 					<Logo1>CodeLab</Logo1>
 					<Logo1>sheCodes</Logo1>
 					<Logo1>Planet of E-Sport</Logo1>
@@ -67,7 +68,7 @@ const Props = styled.div`
 `;
 
 const Logo1 = styled.div`
-	margin: 0 30px;
+	margin: 16px 30px;
 	font-size: 30px;
 `;
 
@@ -76,6 +77,12 @@ const Logos = styled.div`
 	justify-content: center;
 	margin-bottom: 30px;
 	flex-wrap: wrap;
+
+	@media screen and (max-width: 768px) {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 `;
 
 const Space = styled.div`
@@ -87,7 +94,7 @@ const Title2 = styled.div`
 	font-size: 50px;
 	z-index: 100;
 
-	p {
+	span {
 		margin: 0 5px;
 		position: relative;
 		z-index: 100;
@@ -101,11 +108,26 @@ const Title2 = styled.div`
 		bottom: 10px;
 		z-index: 10;
 	}
+
+	@media screen and (max-width: 768px) {
+		font-size: 25px;
+		margin-bottom: 0;
+
+		div {
+			width: 100px;
+			bottom: 4px;
+			z-index: -10;
+		}
+	}
 `;
 
 const Title = styled.div`
 	font-weight: 600;
 	font-size: 50px;
+
+	@media screen and (max-width: 768px) {
+		font-size: 30px;
+	}
 `;
 const Text = styled.div`
 	display: flex;
